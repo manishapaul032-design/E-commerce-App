@@ -11,6 +11,8 @@ const ProductCard = ({ image, title, price, discount }) => {
         {discount && <p>{discount}</p>}
       </div>
     </Link>
+    
+    
   );
 };
 

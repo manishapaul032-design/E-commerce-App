@@ -1,6 +1,6 @@
 import React from 'react';
 import './Register.css'
-import logimg from '../images/log1.jpg'
+import logimg from '../assets/images/log1.jpg'
  
 const Register = () => {
   return (

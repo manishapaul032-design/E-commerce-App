@@ -21,6 +21,7 @@
   background: linear-gradient(45deg, #dd33aa, #2908e4);
   background-clip: text;
   color: transparent;
+  text-decoration: none;
 }
 
 .search-box {
@@ -46,7 +47,7 @@
 }
 
 .btn {
-  padding: 8px 18px;
+  padding: 5px 10px;
   background: white;
   color: #0d6efd;
   border: none;

@@ -1,4 +1,5 @@
 import React from 'react'
+import "./ProductBox.css";
 import earbuds from "../assets/images/earbuds.png";
 import watch from "../assets/images/watch.png";
 import speaker from "../assets/images/speaker.png";

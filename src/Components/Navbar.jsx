@@ -1,17 +1,17 @@
 import React from 'react'
-import './Navbar.css'
+import './Navbar.css';
 
 import {Link} from 'react-router-dom'
 import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
-import Banner from './Banner';
+
 
 const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-    <div className="logo">TrendSphere</div>
+    <Link className="logo" to="/">TrendSphere</Link>
 
     <div className="search-box">
         
@@ -20,7 +20,7 @@ const Navbar = () => {
       <button><FaSearch /></button>
     </div>
 
-     <li className="btn"><FaShoppingCart /> Add to cart</li>
+     <Link className="btn"><FaShoppingCart /> Add to cart</Link>
 
     <Link className="btn" aria-current="page" to="/login"><CgProfile /> Login</Link>
   </nav>
