@@ -165,18 +165,20 @@ const products = [
 
 const ProductDetails=() =>{
   const { id } = useParams();
+  console.log(id);
+  
   const product = products.find((p) => p.id === Number(id));
 
   if (!product) return <h2>Product not found</h2>;
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>{p.name}</h2>
-      <p>Price: ₹ {p.price}</p>
-      <p>{p.info}</p>
+      <h2>{product.title}</h2>
+      <p>Price: ₹ {product.price}</p>
+      <p>{product.info}</p>
 
       {/* open another site (external website) */}
-      <a href={p.link} target="_blank" rel="noreferrer">
+      <a href={product.link} target="_blank" rel="noreferrer">
         <button style={{ marginTop: 20 }}>View on Official Site</button>
       </a>
     </div>
