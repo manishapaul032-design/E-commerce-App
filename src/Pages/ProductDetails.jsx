@@ -1,5 +1,21 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import earbuds from "../assets/images/earbuds.png";
+import watch1 from "../assets/images/watch1.jpg";
+import watch from "../assets/images/watch.png";
+import woman from "../assets/images/woman.jpg";
+import man from "../assets/images/man.jpg";
+import sweater from "../assets/images/sweater.jpg";
+import speaker1 from "../assets/images/speaker1.jpg";
+import shoe1 from "../assets/images/shoe1.jpg";
+import shoes from "../assets/images/shoes.jpg";
+import phn from "../assets/images/phn.jpg";
+import phn1 from "../assets/images/phn1.jpg";
+import phn2 from "../assets/images/phn2.jpg";
+import cream from "../assets/images/cream.jpg";
+import cream1 from "../assets/images/cream1.jpg";
+import cream2 from "../assets/images/cream2.jpg";
+import cream3 from "../assets/images/cream3.jpg";
 
 const products = [
    {
@@ -155,12 +171,12 @@ const ProductDetails=() =>{
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>{product.name}</h2>
-      <p>Price: ₹ {product.price}</p>
-      <p>{product.info}</p>
+      <h2>{p.name}</h2>
+      <p>Price: ₹ {p.price}</p>
+      <p>{p.info}</p>
 
       {/* open another site (external website) */}
-      <a href={product.link} target="_blank" rel="noreferrer">
+      <a href={p.link} target="_blank" rel="noreferrer">
         <button style={{ marginTop: 20 }}>View on Official Site</button>
       </a>
     </div>
