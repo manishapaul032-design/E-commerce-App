@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import './Navbar.css';
 
-import {Link} from 'react-router-dom'
+import {Link} from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
@@ -20,7 +20,7 @@ const Navbar = () => {
       <button><FaSearch /></button>
     </div>
 
-     <Link className="btn"><FaShoppingCart /> Add to cart</Link>
+     <Link className="btn" aria-current="page" to="/CartPage"><FaShoppingCart /> Add to cart</Link>
 
     <Link className="btn" aria-current="page" to="/login"><CgProfile /> Login</Link>
   </nav>

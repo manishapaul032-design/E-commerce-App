@@ -5,6 +5,8 @@ import watch from "../assets/images/watch.png";
 import speaker from "../assets/images/speaker.png";
 import phone from "../assets/images/phone.png";
 import ProductCard from './ProductCard';
+import {Link} from "react-router-dom";
+
 const Electronics = () => {
     const electronics = [
         { image: earbuds, title: "Wireless Earbuds", price: "₹899", discount: "Min. 50% off" },
@@ -16,7 +18,7 @@ const Electronics = () => {
       <div className="product-box">
         <div className="product-box-header">
           <h2>Best of Electronics</h2>
-          <button className="view-btn">View All</button>
+          <Link aria-current="page" to="/products/:pid"><button className="view-btn">View All</button></Link>
         </div>
 
         <div className="product-box-items">

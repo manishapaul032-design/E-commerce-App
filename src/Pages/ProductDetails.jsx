@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import { useParams } from 'react-router-dom';
 import earbuds from "../assets/images/earbuds.png";
 import watch1 from "../assets/images/watch1.jpg";
 import watch from "../assets/images/watch.png";
@@ -165,15 +165,13 @@ const products = [
 
 const ProductDetails=() =>{
   const { id } = useParams();
-  console.log(id);
-  
-  const product = products.find((p) => p.id === Number(id));
+  const product = products.find((product) => product.id === Number(id));
 
   if (!product) return <h2>Product not found</h2>;
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>{product.title}</h2>
+      <h2>{product.name}</h2>
       <p>Price: ₹ {product.price}</p>
       <p>{product.info}</p>
 
@@ -185,3 +183,4 @@ const ProductDetails=() =>{
   );
 }
 export default ProductDetails;
+

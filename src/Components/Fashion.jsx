@@ -6,6 +6,8 @@ import Moisturizer from "../assets/images/moisturizer.jpg";
 import Shoes from "../assets/images/shoes.jpg";
 import ProductBox from './ProductBox';
 import ProductCard from './ProductCard';
+import {Link} from "react-router-dom";
+
 const Fashion = () => {
     const fashion = [
         { image: woman, title: "Woman's SweatShirt", price: "₹599", discount: "Min. 30% off" },
@@ -17,7 +19,7 @@ const Fashion = () => {
     <div className="product-box">
         <div className="product-box-header">
           <h2>Fashion Top Deals</h2>
-          <button className="view-btn">View All</button>
+           <Link aria-current="page" to="/products/:pid"><button className="view-btn">View All</button></Link>
         </div>
 
         <div className="product-box-items">
