@@ -22,7 +22,7 @@ const Navbar = () => {
 
      <Link className="btn" aria-current="page" to="/CartPage"><FaShoppingCart /> Add to cart</Link>
 
-    <Link className="btn" aria-current="page" to="/login"><CgProfile /> Login</Link>
+    <Link className="btn1" aria-current="page" to="/login"><CgProfile /> Login</Link>
   </nav>
 
     </>

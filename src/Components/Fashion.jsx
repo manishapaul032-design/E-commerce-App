@@ -1,12 +1,12 @@
-import React from 'react'
-import "./ProductBox.css";
+import React from 'react';
+
 import woman from "../assets/images/woman.jpg";
 import man from "../assets/images/man.jpg";
 import Moisturizer from "../assets/images/moisturizer.jpg";
 import Shoes from "../assets/images/shoes.jpg";
 import ProductBox from './ProductBox';
 import ProductCard from './ProductCard';
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 
 const Fashion = () => {
     const fashion = [

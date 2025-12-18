@@ -1,12 +1,13 @@
 .product-box {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 30px auto;
   background: #fff;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
   font-family: Arial, sans-serif;
+  text-decoration: none;
 }
 
 
@@ -20,6 +21,7 @@
 .product-box-header h2 {
   font-size: 22px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .view-btn {
@@ -64,10 +66,14 @@
 .product-item h4 {
   font-size: 16px;
   margin-bottom: 5px;
+  text-decoration: none;
+  
 }
 
-.price {
+.price{
   font-size: 18px;
   color: #e91e63;
   font-weight: 600;
+  text-decoration: none;
+ 
 }

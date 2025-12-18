@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import "./ProductList.css";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import Navbar from '../Components/Navbar'
 import { CiHeart } from "react-icons/ci";
 import earbuds from "../assets/images/earbuds.png";
@@ -174,10 +174,67 @@ const ProductList = () => {
    <Navbar/>
     <div className="container">
     
-       
+        <aside class="sidebar">
+    <h3 class="sidebar-title">Filters</h3>
+
+   
+    <div class="filter-section">
+      <h4>Category</h4>
+      <ul>
+        <li>Audio & Video</li>
+        <li class="sub">Speakers</li>
+        <li class="sub">Portable Audio</li>
+        <li class="sub">Home Audio</li>
+      </ul>
+    </div>
+
+   
+    <div class="filter-section">
+      <h4>Brand</h4>
+      <label><input type="checkbox"/> boAt</label>
+      <label><input type="checkbox"/> JBL</label>
+      <label><input type="checkbox"/> Sony</label>
+      <label><input type="checkbox"/> Mi</label>
+    </div>
+
+  
+    <div class="filter-section">
+      <h4>Price</h4>
+      <div class="price-range">
+        <select>
+          <option>Min</option>
+          <option>₹500</option>
+          <option>₹1000</option>
+        </select>
+        <span>to</span>
+        <select>
+          <option>₹5000+</option>
+          <option>₹3000</option>
+          <option>₹10000</option>
+        </select>
+      </div>
+    </div>
+
+ 
+    <div class="filter-section">
+      <h4>Customer Ratings</h4>
+      <label><input type="checkbox"/> 4★ & above</label>
+      <label><input type="checkbox"/> 3★ & above</label>
+      <label><input type="checkbox"/> 2★ & above</label>
+    </div>
+
+   
+    <div class="filter-section">
+      <h4>Discount</h4>
+      <label><input type="checkbox"/> 50% or more</label>
+      <label><input type="checkbox"/> 40% or more</label>
+      <label><input type="checkbox"/> 30% or more</label>
+    </div>
+  </aside>
 
   
       <main className="product-grid">
+
         {products.map((p) => (
           <div className="product-card" key={p.id}>
             <CiHeart />

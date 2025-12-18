@@ -1,11 +1,11 @@
-import React from 'react'
-import "./ProductBox.css";
+import React from 'react';
+
 import earbuds from "../assets/images/earbuds.png";
 import watch from "../assets/images/watch.png";
 import speaker from "../assets/images/speaker.png";
 import phone from "../assets/images/phone.png";
 import ProductCard from './ProductCard';
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 
 const Electronics = () => {
     const electronics = [

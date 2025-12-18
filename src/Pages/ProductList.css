@@ -4,32 +4,8 @@
   background: #f1f3f6;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 220px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  height: fit-content;
-}
 
-.filter-box {
-  margin-bottom: 25px;
-}
 
-.filter-box h4 {
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.filter-box label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-/* Product Grid */
 .product-grid {
   flex: 1;
   display: grid;
@@ -90,4 +66,69 @@
   margin-left: 10px;
   color: #388e3c;
   font-weight: 500;
+}
+.sidebar {
+  width: 260px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* Sidebar title */
+.sidebar-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Filter section */
+.filter-section {
+  border-top: 1px solid #e0e0e0;
+  padding: 12px 0;
+}
+
+.filter-section h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Category list */
+.filter-section ul {
+  list-style: none;
+}
+
+.filter-section ul li {
+  font-size: 13px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.filter-section ul .sub {
+  padding-left: 15px;
+  color: #555;
+}
+
+/* Checkbox labels */
+.filter-section label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.filter-section input {
+  margin-right: 6px;
+}
+
+/* Price range */
+.price-range {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.price-range select {
+  padding: 4px;
+  font-size: 12px;
 }
