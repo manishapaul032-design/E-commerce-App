@@ -8,6 +8,7 @@ import { CgProfile } from "react-icons/cg";
 
 
 const Navbar = () => {
+
   return (
     <>
       <nav className="navbar">
@@ -18,6 +19,7 @@ const Navbar = () => {
       <input type="text" placeholder="Search for Products, Brands and More" />
      
       <button><FaSearch /></button>
+      
     </div>
 
      <Link className="btn" aria-current="page" to="/CartPage"><FaShoppingCart /> Add to cart</Link>

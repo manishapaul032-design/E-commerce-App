@@ -38,7 +38,7 @@
 }
 
 .search-box button {
-  padding: 8px 15px;
+  padding: 5px 10px;
   border: none;
   background: #ecca6b;
   color: white;
@@ -46,6 +46,7 @@
   border-radius: 0 3px 3px 0;
   margin-right: 30px;
 }
+
 
 .btn {
   padding: 4px 4px;

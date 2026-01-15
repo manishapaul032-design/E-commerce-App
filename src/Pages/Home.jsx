@@ -4,6 +4,7 @@ import Banner from '../Components/Banner'
 import ProductBox from '../Components/ProductBox'
 import Footer from '../Components/Footer'
 
+
 const Home = () => {
   return (
     <div>

@@ -44,8 +44,8 @@ const ProductDetails=() =>{
     </div>
 
     <div class="p-price">
-      ₹2,499 <span class="old-price">₹3,999</span>
-      <span class="discount">38% off</span>
+      ₹1,199 <span class="old-price">₹1,499</span>
+      <span class="discount">20% off</span>
     </div>
 
     <p class="description">
