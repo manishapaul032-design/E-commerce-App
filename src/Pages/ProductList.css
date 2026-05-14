@@ -11,7 +11,7 @@
  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 16px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .product-card {
@@ -34,7 +34,7 @@
 }
 
 .title {
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.4;
   height: 40px; /* equal height */
   overflow: hidden;
@@ -91,7 +91,7 @@
 }
 
 .filter-section h4 {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 10px;
   font-weight: bold;
 }

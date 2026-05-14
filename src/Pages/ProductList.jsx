@@ -158,7 +158,7 @@ const products = [
     image: cream2,
   },
   {
-    id: 15,
+    id: 16,
     title: "NIVEA Soft Light Moisturizing 300ml Crèam, Jojoba oil & Vitamin-E,Face/Body/Hands  (300 ml)",
     rating: 4.0,
     reviews: "3,768",
@@ -174,33 +174,33 @@ const ProductList = () => {
    <Navbar/>
     <div className="container">
     
-        <aside class="sidebar">
-    <h3 class="sidebar-title">Filters</h3>
+        <aside classname="sidebar">
+    <h3 classname="sidebar-title">Filters</h3>
 
    
-    <div class="filter-section">
+    <div classname="filter-section">
       <h4>Category</h4>
       <ul>
         <li>Audio & Video</li>
-        <li class="sub">Speakers</li>
-        <li class="sub">Portable Audio</li>
-        <li class="sub">Home Audio</li>
+        <li classname="sub">Speakers</li>
+        <li classname="sub">Portable Audio</li>
+        <li classname="sub">Home Audio</li>
       </ul>
-    </div>
+    </div><br></br>
 
    
-    <div class="filter-section">
+    <div classname="filter-section">
       <h4>Brand</h4>
       <label><input type="checkbox"/> boAt</label>
       <label><input type="checkbox"/> JBL</label>
       <label><input type="checkbox"/> Sony</label>
       <label><input type="checkbox"/> Mi</label>
-    </div>
+    </div><br></br>
 
   
-    <div class="filter-section">
+    <div classname="filter-section">
       <h4>Price</h4>
-      <div class="price-range">
+      <div classname="price-range">
         <select>
           <option>Min</option>
           <option>₹500</option>
@@ -213,18 +213,18 @@ const ProductList = () => {
           <option>₹10000</option>
         </select>
       </div>
-    </div>
+    </div><br></br>
 
  
-    <div class="filter-section">
+    <div classname="filter-section">
       <h4>Customer Ratings</h4>
       <label><input type="checkbox"/> 4★ & above</label>
       <label><input type="checkbox"/> 3★ & above</label>
       <label><input type="checkbox"/> 2★ & above</label>
-    </div>
+    </div><br></br>
 
    
-    <div class="filter-section">
+    <div classname="filter-section">
       <h4>Discount</h4>
       <label><input type="checkbox"/> 50% or more</label>
       <label><input type="checkbox"/> 40% or more</label>

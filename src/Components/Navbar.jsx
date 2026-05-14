@@ -21,6 +21,7 @@ const Navbar = () => {
       <button><FaSearch /></button>
       
     </div>
+    <Link className="btn2" aria-current="page" to="/wishlist">Wishlist</Link>
 
      <Link className="btn" aria-current="page" to="/CartPage"><FaShoppingCart /> Add to cart</Link>
 

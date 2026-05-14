@@ -1,0 +1,16 @@
+.wishlist-container{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.wishlist-card{
+  width:220px;
+  border:1px solid #ddd;
+  padding:15px;
+  border-radius:10px;
+}
+
+.wishlist-card img{
+  width:100%;
+}
