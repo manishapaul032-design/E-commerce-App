@@ -175,21 +175,21 @@ const ProductList = () => {
     <div className="container">
     
         <aside classname="sidebar">
-    <h3 classname="sidebar-title">Filters</h3>
+    <h3 className="sidebar-title">Filters</h3>
 
    
-    <div classname="filter-section">
+    <div className="filter-section">
       <h4>Category</h4>
       <ul>
         <li>Audio & Video</li>
-        <li classname="sub">Speakers</li>
-        <li classname="sub">Portable Audio</li>
-        <li classname="sub">Home Audio</li>
+        <li className="sub">Speakers</li>
+        <li className="sub">Portable Audio</li>
+        <li className="sub">Home Audio</li>
       </ul>
     </div><br></br>
 
    
-    <div classname="filter-section">
+    <div className="filter-section">
       <h4>Brand</h4>
       <label><input type="checkbox"/> boAt</label>
       <label><input type="checkbox"/> JBL</label>
@@ -198,9 +198,9 @@ const ProductList = () => {
     </div><br></br>
 
   
-    <div classname="filter-section">
+    <div className="filter-section">
       <h4>Price</h4>
-      <div classname="price-range">
+      <div className="price-range">
         <select>
           <option>Min</option>
           <option>₹500</option>
@@ -216,7 +216,7 @@ const ProductList = () => {
     </div><br></br>
 
  
-    <div classname="filter-section">
+    <div className="filter-section">
       <h4>Customer Ratings</h4>
       <label><input type="checkbox"/> 4★ & above</label>
       <label><input type="checkbox"/> 3★ & above</label>
@@ -224,7 +224,7 @@ const ProductList = () => {
     </div><br></br>
 
    
-    <div classname="filter-section">
+    <div className="filter-section">
       <h4>Discount</h4>
       <label><input type="checkbox"/> 50% or more</label>
       <label><input type="checkbox"/> 40% or more</label>

@@ -20,8 +20,9 @@ const App =()=> {
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/CartPage' element={<CartPage/>}/>
+          
 
-          <Route path='/products/:pid' element={<ProductList/>}/>
+          <Route path='/products' element={<ProductList/>}/>
           <Route path='/product/:id' element={<ProductDetails/>}/>
           <Route path="/wishlist" element={<Wishlist />}/>
           

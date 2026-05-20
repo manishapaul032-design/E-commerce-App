@@ -1,43 +1,122 @@
+/* Slider Wrapper */
+.slider {
+  width: 100%;
+  padding: 15px 20px;
+  background: #f1f3f6;
+  box-sizing: border-box;
+}
+
+/* Banner */
 .responsive-banner {
   width: 100%;
-  height: 300px;
+  height: 420px;
+  border-radius: 14px;
   background-size: cover;
   background-position: center;
-  padding: 40px;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  color: #fff;
+  padding: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Dark Overlay */
+.responsive-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Text Content */
 .text-area {
-  flex: 1 1 300px;
-  max-width: 500px;
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  color: white;
 }
 
+/* Heading */
 .text-area h1 {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
+/* Paragraph */
 .text-area p {
   font-size: 18px;
-  margin-top: 10px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #f5f5f5;
 }
 
+/* Shop Button */
 .shop-btn {
-  margin-top: 20px;
-  padding: 12px 28px;
-  background: white;
-  color: #ff3300;
-  border-radius: 10px;
+  padding: 14px 30px;
+  background: #ff9f00;
+  color: white;
   border: none;
-  font-size: 18px;
-  font-weight: bold;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .shop-btn:hover {
-  background: #ffe0d2;
+  background: #fb8c00;
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .responsive-banner {
+    height: 340px;
+    padding: 35px;
+  }
+
+  .text-area h1 {
+    font-size: 40px;
+  }
+
+  .text-area p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .slider {
+    padding: 10px;
+  }
+
+  .responsive-banner {
+    height: 260px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .text-area {
+    max-width: 100%;
+  }
+
+  .text-area h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .text-area p {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .shop-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }

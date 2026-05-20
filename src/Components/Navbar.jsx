@@ -21,11 +21,19 @@ const Navbar = () => {
       <button><FaSearch /></button>
       
     </div>
-    <Link className="btn2" aria-current="page" to="/wishlist">Wishlist</Link>
+    <div className="nav-buttons">
+  <Link className="btn2" to="/wishlist">
+    Wishlist
+  </Link>
 
-     <Link className="btn" aria-current="page" to="/CartPage"><FaShoppingCart /> Add to cart</Link>
+  <Link className="btn" to="/CartPage">
+    <FaShoppingCart /> Add to cart
+  </Link>
 
-    <Link className="btn1" aria-current="page" to="/login"><CgProfile /> Login</Link>
+  <Link className="btn1" to="/login">
+    <CgProfile /> Login
+  </Link>
+</div>
   </nav>
 
     </>
