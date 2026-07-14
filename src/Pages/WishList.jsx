@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './WishList.css'
+import Navbar from "../Components/Navbar";
 
 const Wishlist = () => {
 
@@ -16,7 +17,8 @@ const Wishlist = () => {
   }, []);
 
   return (
-
+<>
+<Navbar/>
     <div className="wishlist-page">
 
       <h1>My Wishlist</h1>
@@ -48,6 +50,7 @@ const Wishlist = () => {
       </div>
 
     </div>
+    </>
   );
 };
 

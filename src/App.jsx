@@ -7,6 +7,7 @@ import Login from './Pages/Login';
 import ProductList from './Pages/ProductList';
 import ProductDetails from './Pages/ProductDetails';
 import Wishlist from "./Pages/Wishlist";
+import Women from "./Pages/Women";
 
 import CartPage from './Pages/CartPage';
 
@@ -21,7 +22,7 @@ const App =()=> {
           <Route path='/login' element={<Login/>}/>
           <Route path='/CartPage' element={<CartPage/>}/>
           
-
+           <Route path="/women" element={<Women />} />
           <Route path='/products' element={<ProductList/>}/>
           <Route path='/product/:id' element={<ProductDetails/>}/>
           <Route path="/wishlist" element={<Wishlist />}/>

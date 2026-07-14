@@ -1,140 +1,315 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-.navbar {
-  width: 100%;
-  background-color: #d3830c;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+body{
+    background:#f5f5f5;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  font-style: italic;
-  background: linear-gradient(45deg, #dd33aa, #2908e4);
-  background-clip: text;
-  color: transparent;
-  text-decoration: none;
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar{
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 45px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
 }
 
-.search-box {
-  display: flex;
-  width: 50%;
+/* ========================= */
+/* LOGO */
+/* ========================= */
+
+.logo{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    background:linear-gradient(90deg,#ff512f,#dd2476,#4e54c8);
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+    transition:.3s;
+
 }
 
-.search-box input {
-  width: 80%;
-  padding: 8px;
-  border: none;
-  border-radius: 3px 0 0 3px;
-  outline: none;
+.logo:hover{
+
+    transform:scale(1.05);
+
 }
 
-.search-box button {
-  padding: 5px 10px;
-  border: none;
-  background: #ecca6b;
-  color: white;
-  cursor: pointer;
-  border-radius: 0 3px 3px 0;
-  margin-right: 30px;
+/* ========================= */
+/* SEARCH */
+/* ========================= */
+
+.search-box{
+
+    width:48%;
+
+    display:flex;
+
+    align-items:center;
+
+    background:#fff;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    border:1px solid #ececec;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
 }
 
+.search-box input{
 
-/* Navbar Button Container (optional) */
-.nav-buttons {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:15px 22px;
+
+    font-size:15px;
+
+    background:transparent;
+
 }
 
-/* Common Button Style */
+.search-box button{
+
+    width:60px;
+
+    height:52px;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,#2b7fff,#0047ff);
+
+    transition:.3s;
+
+}
+
+.search-box button:hover{
+
+    background:linear-gradient(135deg,#0047ff,#0036c7);
+
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.nav-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
 .btn,
 .btn1,
-.btn2 {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
+.btn2{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:12px 22px;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
 }
 
-/* Cart Button */
-.btn {
-  background: #ff9f00;
-  color: white;
-  border: none;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+/* Wishlist */
+
+.btn2{
+
+    color:#222;
+
+    background:#fff;
+
+    border:1px solid #ddd;
+
 }
 
-.btn:hover {
-  background: #fb8c00;
-  transform: translateY(-2px);
+.btn2:hover{
+
+    background:#111;
+
+    color:#fff;
+
 }
 
-/* Login Button */
-.btn1 {
-  background: white;
-  color: #2874f0;
-  border: 1px solid #dcdcdc;
+/* Cart */
+
+.btn{
+
+    background:linear-gradient(135deg,#ff9800,#ff6d00);
+
+    color:white;
+
+    box-shadow:0 8px 20px rgba(255,152,0,.35);
+
 }
 
-.btn1:hover {
-  background: #f5faff;
-  border-color: #2874f0;
-  transform: translateY(-2px);
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(255,152,0,.45);
+
 }
 
-/* Wishlist Button */
-.btn2 {
-  background: transparent;
-  color: #212121;
-  border: 1px solid #dcdcdc;
+/* Login */
+
+.btn1{
+
+    background:#111;
+
+    color:#fff;
+
 }
 
-.btn2:hover {
-  background: #f1f3f6;
-  color: #2874f0;
-  border-color: #2874f0;
-  transform: translateY(-2px);
+.btn1:hover{
+
+    background:#d62828;
+
+    transform:translateY(-3px);
+
 }
 
 /* Icons */
+
 .btn svg,
-.btn1 svg,
-.btn2 svg {
-  font-size: 18px;
+.btn1 svg{
+
+    font-size:18px;
+
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .nav-buttons {
-    gap: 8px;
-  }
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
 
-  .btn,
-  .btn1,
-  .btn2 {
-    padding: 8px 12px;
-    font-size: 13px;
-  }
+@media(max-width:992px){
 
-  .btn svg,
-  .btn1 svg,
-  .btn2 svg {
-    font-size: 16px;
-  }
+.navbar{
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    padding:20px;
+
+}
+
+.logo{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.search-box{
+
+    width:100%;
+
+}
+
+.nav-buttons{
+
+    width:100%;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.logo{
+
+    font-size:28px;
+
+}
+
+.search-box input{
+
+    font-size:14px;
+
+    padding:12px 16px;
+
+}
+
+.search-box button{
+
+    height:46px;
+
+}
+
+.btn,
+.btn1,
+.btn2{
+
+    padding:10px 16px;
+
+    font-size:13px;
+
+}
+
 }

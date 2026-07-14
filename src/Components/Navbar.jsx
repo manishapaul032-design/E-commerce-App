@@ -1,43 +1,49 @@
-import React from 'react';
-import './Navbar.css';
+import React from "react";
+import "./Navbar.css";
 
-import {Link} from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 
-
 const Navbar = () => {
-
   return (
-    <>
-      <nav className="navbar">
-    <Link className="logo" to="/">TrendSphere</Link>
+    <nav className="navbar">
 
-    <div className="search-box">
-        
-      <input type="text" placeholder="Search for Products, Brands and More" />
-     
-      <button><FaSearch /></button>
-      
-    </div>
-    <div className="nav-buttons">
-  <Link className="btn2" to="/wishlist">
-    Wishlist
-  </Link>
+      <Link className="logo" to="/">
+        TrendSphere
+      </Link>
 
-  <Link className="btn" to="/CartPage">
-    <FaShoppingCart /> Add to cart
-  </Link>
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Search for Products, Brands and More"
+        />
 
-  <Link className="btn1" to="/login">
-    <CgProfile /> Login
-  </Link>
-</div>
-  </nav>
+        <button>
+          <FaSearch />
+        </button>
+      </div>
 
-    </>
-  )
-}
+      <div className="nav-buttons">
 
-export default Navbar
+        <Link className="btn2" to="/wishlist">
+          Wishlist
+        </Link>
+
+        <Link className="btn" to="/CartPage">
+          <FaShoppingCart />
+          <span>Add to Cart</span>
+        </Link>
+
+        <Link className="btn1" to="/login">
+          <CgProfile />
+          <span>Login</span>
+        </Link>
+
+      </div>
+
+    </nav>
+  );
+};
+
+export default Navbar;
