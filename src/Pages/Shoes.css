@@ -2,93 +2,72 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:Poppins,sans-serif;
 }
 
 body{
     background:#f5f7fb;
 }
 
-/* ======================
-   PAGE
-====================== */
-
-.women-page{
+.shoes-page{
     padding:40px;
 }
 
-/* ======================
-   HERO BANNER
-====================== */
+/* Hero Banner */
 
 .hero-banner{
     width:100%;
     height:420px;
     border-radius:20px;
     overflow:hidden;
-    position:relative;
-    margin-bottom:50px;
-
-    background:url("../assets/images/women-banner.jpg");
     background-size:cover;
     background-position:center;
-    background-repeat:no-repeat;
+    position:relative;
+    margin-bottom:45px;
 }
 
 .overlay{
-    position:absolute;
-    inset:0;
-
-    background:linear-gradient(
-        to right,
+    width:100%;
+    height:100%;
+    background:linear-gradient(to right,
         rgba(0,0,0,.65),
-        rgba(0,0,0,.20)
-    );
+        rgba(0,0,0,.20));
 
     display:flex;
     flex-direction:column;
     justify-content:center;
-
     padding-left:70px;
-
     color:#fff;
 }
 
 .overlay h1{
     font-size:58px;
-    font-weight:700;
     margin-bottom:15px;
 }
 
 .overlay p{
+    width:520px;
     font-size:22px;
+    line-height:34px;
     margin-bottom:25px;
-    max-width:500px;
 }
 
-/* Hero Button */
-
-.shop-btn2{
+.shop-btn4{
     width:180px;
     height:50px;
     border:none;
     border-radius:8px;
-    background:#2563eb;
+    background:#ff6b00;
     color:#fff;
-    font-size:17px;
+    font-size:18px;
     font-weight:600;
     cursor:pointer;
     transition:.3s;
 }
 
-.shop-btn2:hover{
-    background:#1d4ed8;
-    transform:translateY(-3px);
+.shop-btn4:hover{
+    background:#e65c00;
 }
-
-/* ======================
-   TITLE
-====================== */
 
 .section-title{
     font-size:34px;
@@ -96,45 +75,29 @@ body{
     margin-bottom:30px;
 }
 
-/* ======================
-   GRID
-====================== */
+/* Product Grid */
 
-.product-grid2{
+.product-grid4{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
 }
 
-/* ======================
-   CARD
-====================== */
+/* Product Card */
 
-.product-card2{
-
+.product-card4{
     background:#fff;
-
     border-radius:15px;
-
     overflow:hidden;
-
     box-shadow:0 6px 18px rgba(0,0,0,.08);
-
     transition:.35s;
-
     position:relative;
-
 }
 
-.product-card2:hover{
-
+.product-card4:hover{
     transform:translateY(-8px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.18);
-
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
 }
-
-/* Wishlist */
 
 .wishlist{
     position:absolute;
@@ -152,153 +115,87 @@ body{
     box-shadow:0 3px 10px rgba(0,0,0,.12);
 }
 
-/* Image */
-
 .image-box{
-
-    height:330px;
-
+    height:320px;
     overflow:hidden;
-
 }
 
 .image-box img{
-
     width:100%;
-
     height:100%;
-
-    object-fit:cover;
-
+    object-fit:contain;
     transition:.4s;
-
+    padding:20px;
 }
 
-.product-card2:hover img{
-
+.product-card4:hover img{
     transform:scale(1.08);
-
 }
-
-/* Product Info */
 
 .product-info{
-
     padding:20px;
-
 }
 
 .product-info h3{
-
     font-size:20px;
-
     margin-bottom:10px;
-
-    color:#222;
-
+    min-height:52px;
 }
 
-/* Rating */
-
-.rating2{
-
+.rating4{
     display:inline-block;
-
     background:#16a34a;
-
     color:#fff;
-
     padding:5px 10px;
-
     border-radius:5px;
-
-    font-size:14px;
-
     margin-bottom:15px;
-
 }
-
-/* Price */
 
 .price-row{
-
     display:flex;
-
-    align-items:center;
-
     gap:10px;
-
+    align-items:center;
 }
 
 .price{
-
     font-size:28px;
-
     font-weight:700;
-
 }
 
 .old-price{
-
-    text-decoration:line-through;
-
     color:#888;
-
+    text-decoration:line-through;
 }
 
 .discount{
-
     display:block;
-
-    margin-top:8px;
-
+    margin:10px 0;
     color:#16a34a;
-
     font-weight:600;
-
 }
 
-/* Card Button */
-
 .cart-btn{
-
     width:100%;
-
     height:48px;
-
-    margin-top:20px;
-
     border:none;
-
     border-radius:8px;
-
-    background:#2563eb;
-
+    background:#ff6b00;
     color:#fff;
-
     font-size:16px;
-
     font-weight:600;
-
     cursor:pointer;
-
     transition:.3s;
-
 }
 
 .cart-btn:hover{
-
-    background:#1d4ed8;
-
+    background:#e65c00;
 }
 
-/* ======================
-   RESPONSIVE
-====================== */
+/* Responsive */
 
 @media(max-width:768px){
 
-    .women-page{
+    .shoes-page{
         padding:20px;
     }
 
@@ -315,15 +212,12 @@ body{
     }
 
     .overlay p{
+        width:100%;
         font-size:16px;
+        line-height:26px;
     }
 
-    .shop-btn{
-        width:150px;
-        height:45px;
-    }
-
-    .product-grid2{
+    .product-grid4{
         grid-template-columns:1fr;
     }
 

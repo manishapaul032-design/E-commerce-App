@@ -10,7 +10,8 @@ const Navbar = () => {
     <nav className="navbar">
 
       <Link className="logo" to="/">
-        TrendSphere
+         <span className="trend">Trend</span>
+  <span className="sphere">Sphere</span>
       </Link>
 
       <div className="search-box">

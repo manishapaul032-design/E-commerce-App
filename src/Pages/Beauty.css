@@ -1,0 +1,277 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+.beauty-page{
+    padding:40px;
+}
+
+/* Hero Banner */
+
+.hero-banner{
+    width:100%;
+    height:420px;
+    border-radius:20px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    overflow:hidden;
+    margin-bottom:45px;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:linear-gradient(to right,
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.20));
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding-left:70px;
+    color:white;
+}
+
+.overlay h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.overlay p{
+    font-size:22px;
+    width:500px;
+    line-height:34px;
+    margin-bottom:25px;
+}
+
+.shop-btn3{
+    width:180px;
+    height:50px;
+    border:none;
+    border-radius:8px;
+    background:#ec4899;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.shop-btn3:hover{
+    background:#db2777;
+}
+
+.section-title{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+/* Grid */
+
+.product-grid3{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* Card */
+
+/* ==========================
+   Product Card
+========================== */
+
+.product-card3{
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    transition:all .35s ease;
+}
+
+.product-card3:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* ==========================
+   Product Image
+========================== */
+
+.image-box{
+    position:relative;
+    width:100%;
+    height:320px;
+    overflow:hidden;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.product-card:hover .image-box img{
+    transform:scale(1.08);
+}
+
+/* ==========================
+   Wishlist Button
+========================== */
+
+.wishlist{
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#fff;
+    color:#444;
+
+    border:none;
+    border-radius:50%;
+
+    font-size:22px;
+    cursor:pointer;
+
+    z-index:100;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+    transition:all .3s ease;
+}
+
+.wishlist:hover{
+    background:#ff3f6c;
+    color:#fff;
+    transform:scale(1.1);
+}
+
+/* ==========================
+   Product Info
+========================== */
+
+.product-info{
+    padding:18px;
+}
+
+.product-info h3{
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:12px;
+    color:#222;
+}
+
+.rating3{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+
+    background:#16a34a;
+    color:#fff;
+
+    padding:6px 12px;
+    border-radius:6px;
+
+    font-size:15px;
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+.price-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:28px;
+    font-weight:700;
+    color:#111;
+}
+
+.old-price{
+    color:#888;
+    text-decoration:line-through;
+    font-size:18px;
+}
+
+.discount{
+    color:#16a34a;
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.cart-btn{
+    width:100%;
+    height:48px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#ec4899;
+    color:#fff;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cart-btn:hover{
+    background:#db2777;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.beauty-page{
+    padding:20px;
+}
+
+.hero-banner{
+    height:280px;
+}
+
+.overlay{
+    padding:30px;
+}
+
+.overlay h1{
+    font-size:36px;
+}
+
+.overlay p{
+    width:100%;
+    font-size:16px;
+    line-height:26px;
+}
+
+.product-grid3{
+    grid-template-columns:1fr;
+}
+
+}

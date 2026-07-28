@@ -1,6 +1,7 @@
 import React from 'react'
 import './Banner.css'
-import bg from '../assets/images/b3.jpg'
+import bg from '../assets/images/b3.jpeg'
+import { FaShoppingCart } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -9,9 +10,8 @@ const Banner = () => {
       
       <div className="responsive-banner" style={{ backgroundImage: `url(${bg})` }}>
   <div className="text-area">
-    <h1>Summer Sale is Live!</h1>
-    <p>Exciting offers on Electronics, Fashion, Home & more</p>
-    <button className="shop-btn">Shop Now</button>
+    
+    <button className="shop-btn"><FaShoppingCart />Shop Now</button>
   </div>
   </div>
   </div>

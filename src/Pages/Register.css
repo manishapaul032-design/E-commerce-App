@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f1f3f6;
+}
+
+.register{
+    width:420px;
+    background:#fff;
+    margin:60px auto;
+    padding:40px;
+    border-radius:8px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.register h2{
+    text-align:center;
+    color:#2874f0;
+    margin-bottom:30px;
+    font-size:28px;
+}
+
+.register form{
+    display:flex;
+    flex-direction:column;
+}
+
+.register input{
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    outline:none;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.register input:focus{
+    border-color:#2874f0;
+    box-shadow:0 0 5px rgba(40,116,240,.3);
+}
+
+.register button{
+    width:100%;
+    padding:14px;
+    background:#fb641b;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+}
+
+.register button:hover{
+    background:#e85d0f;
+}
+
+.register p{
+    text-align:center;
+    margin-top:20px;
+    color:#555;
+}
+
+.register a{
+    color:#2874f0;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.register a:hover{
+    text-decoration:underline;
+}
+
+@media(max-width:500px){
+
+.register{
+    width:95%;
+    margin:30px auto;
+    padding:25px;
+}
+
+}

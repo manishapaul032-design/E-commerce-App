@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "./ProductDetails.css";
-
+import Navbar from "../Components/Navbar";
 import earbuds from "../assets/images/earbuds.png";
 import watch1 from "../assets/images/watch1.jpg";
 import watch from "../assets/images/watch.png";
@@ -202,9 +202,10 @@ const handleWishlist = () => {
   }
 
   return (
-    <div className="details-page">
-
-     
+    <>
+    <Navbar/>
+    
+    <div className="details-page">    
 
       <div className="left-side">
 
@@ -213,19 +214,10 @@ const handleWishlist = () => {
           <div className="img-card">
             <img src={product.image} alt="" />
           </div>
-
-
-      
-
-         
-
         </div>
 
       </div>
 
-      
-
-     
 
         <div className="title-heart">
 
@@ -295,6 +287,7 @@ const handleWishlist = () => {
       </div>
 
     </div>
+    </>
   );
 };
 

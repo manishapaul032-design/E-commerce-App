@@ -174,7 +174,7 @@ const ProductList = () => {
    <Navbar/>
     <div className="container">
     
-        <aside classname="sidebar">
+        <aside className="sidebar">
     <h3 className="sidebar-title">Filters</h3>
 
    
@@ -247,19 +247,26 @@ const ProductList = () => {
             </span>
 
             <div className="price-box">
-              <span className="price">₹{p.price}</span>
-              <span className="old-price">₹{p.oldPrice}</span>
-              <span className="discount">
-                {Math.floor(((p.oldPrice - p.price) / p.oldPrice) * 100)}% off
-              </span>
-               <Link to={`/product/${p.id}`}>
-              <button style={{ width: "100%",
-                borderRadius: 10,
-               }}>View Details</button>
-            </Link>
 
-            </div>
-            
+    <div className="price-row">
+        <span className="price">₹{p.price}</span>
+
+        <span className="old-price">
+            ₹{p.oldPrice}
+        </span>
+
+        <span className="discount">
+            {Math.floor(((p.oldPrice-p.price)/p.oldPrice)*100)}% off
+        </span>
+    </div>
+
+    <Link to={`/product/${p.id}`}>
+        <button className="view-btn">
+            View Details
+        </button>
+    </Link>
+
+</div>
           </div>
         ))}
       </main>

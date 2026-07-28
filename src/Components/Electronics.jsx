@@ -13,7 +13,7 @@ const Electronics = () => {
       id: 1,
       category: "earbuds",
       image: earbuds,
-      title: "Wireless Earbuds",
+      title: "Headphones",
       price: "₹899",
       discount: "Min. 50% off",
     },
