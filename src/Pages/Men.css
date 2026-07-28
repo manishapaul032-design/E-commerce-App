@@ -62,12 +62,14 @@ body{
     font-size:60px;
     font-weight:800;
     margin-bottom:15px;
+    color: rgb(8, 5, 27);
 }
 
 .hero-content p{
     font-size:22px;
     line-height:34px;
     margin-bottom:25px;
+    color: rgb(27, 2, 2);
 }
 
 .shop-btn1{
