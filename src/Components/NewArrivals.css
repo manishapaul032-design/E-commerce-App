@@ -1,0 +1,254 @@
+.new-arrivals {
+  width: 100%;
+  padding: 45px 40px 60px;
+  background: #f5f7fb;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.new-arrivals .section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+}
+
+.new-arrivals .small-title {
+  display: block;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.new-arrivals .section-heading h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+
+/* =========================
+   VIEW ALL
+========================= */
+
+.new-arrivals .view-all-btn {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.new-arrivals .new-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.new-arrivals .new-card {
+  min-width: 0;
+
+  background: #ffffff;
+
+  padding: 14px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.07);
+
+  transition: 0.35s ease;
+}
+
+.new-arrivals .new-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.new-arrivals .new-image {
+  width: 100%;
+  height: 220px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #f1f5f9;
+}
+
+.new-arrivals .new-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: 0.4s ease;
+}
+
+.new-arrivals .new-card:hover .new-image img {
+  transform: scale(1.06);
+}
+
+
+/* =========================
+   NEW BADGE
+========================= */
+
+.new-arrivals .new-image span {
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+
+  z-index: 5;
+
+  padding: 6px 9px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.new-arrivals .new-info {
+  padding: 13px 2px 2px;
+}
+
+.new-arrivals .new-info h3 {
+  margin: 0 0 8px;
+
+  color: #111827;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 22px;
+}
+
+.new-arrivals .new-info p {
+  margin: 0 0 15px;
+
+  color: #2563eb;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+
+/* =========================
+   ADD CART
+========================= */
+
+.new-arrivals .new-cart {
+  width: 100%;
+
+  height: 43px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.new-arrivals .new-cart:hover {
+  background: #2563eb;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .new-arrivals {
+    padding: 40px 25px;
+  }
+
+  .new-arrivals .new-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .new-arrivals {
+    padding: 30px 15px;
+  }
+
+  .new-arrivals .new-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .new-arrivals .section-heading h2 {
+    font-size: 24px;
+  }
+
+}

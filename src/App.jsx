@@ -29,7 +29,7 @@ const App =()=> {
           <Route path='/CartPage' element={<CartPage/>}/>
           
          
-          <Route path='/products' element={<ProductList/>}/>
+          <Route path="/productlist" element={<ProductList />} />
           <Route path='/product/:id' element={<ProductDetails/>}/>
           <Route path="/wishlist" element={<Wishlist />}/>
 
@@ -38,8 +38,8 @@ const App =()=> {
             <Route path="/men" element={<Men />} />
              <Route path="/beauty" element={<Beauty />} />
              <Route path="/shoes" element={<Shoes />} />
-            <Route path="/products/earbuds" element={<Headphones/>} />
-            <Route path="/products/watch" element={<SmartWatch/>} />
+            <Route path="/earbuds" element={<Headphones/>} />
+            <Route path="/watch" element={<SmartWatch/>} />
           
       
         </Routes>

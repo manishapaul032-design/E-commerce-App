@@ -1,0 +1,345 @@
+/* =========================================
+   VIBE SECTION
+========================================= */
+
+.vibe-section {
+  max-width: 1320px;
+  margin: auto;
+  padding: 55px 25px;
+  text-align: center;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.vibe-heading .small-title {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.vibe-heading h2 {
+  margin: 0;
+
+  color: #111827;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.vibe-heading p {
+  margin-top: 8px;
+
+  color: #6b7280;
+  font-size: 15px;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.vibe-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  margin-top: 35px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.vibe-card {
+  height: 240px;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 25px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  text-align: left;
+
+  background: #e5e7eb;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.vibe-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.vibe-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+
+  transition:
+    transform 0.55s ease;
+}
+
+.vibe-card:hover .vibe-image {
+  transform: scale(1.08);
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.vibe-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.05)
+    );
+}
+
+
+/* =========================================
+   DEFAULT GRADIENT
+   যেসব card-এ image নেই
+========================================= */
+
+.minimal {
+  background:
+    linear-gradient(
+      135deg,
+      #e5e7eb,
+      #ffffff
+    );
+}
+
+.casual {
+  background:
+    linear-gradient(
+      135deg,
+      #bfdbfe,
+      #60a5fa
+    );
+}
+
+.premium {
+  background:
+    linear-gradient(
+      135deg,
+      #111827,
+      #6b7280
+    );
+}
+
+.elegant {
+  background:
+    linear-gradient(
+      135deg,
+      #fbcfe8,
+      #f9a8d4
+    );
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.vibe-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+}
+
+
+/* Image থাকলে text white */
+
+.vibe-card:has(.vibe-image) .vibe-content {
+  color: #ffffff;
+}
+
+
+/* Image না থাকলে text */
+
+.vibe-card:not(:has(.vibe-image)) .vibe-content {
+  color: #111827;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.vibe-content h3 {
+  margin: 0 0 5px;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.vibe-content p {
+  margin: 0 0 15px;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   SHOP NOW BUTTON
+========================================= */
+
+.vibe-content .btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 135px;
+  height: 46px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+
+  color: #ffffff !important;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.vibe-content .btn:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #1d4ed8,
+      #1e40af
+    );
+
+  box-shadow:
+    0 12px 28px rgba(37, 99, 235, 0.35);
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+  .vibe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .vibe-section {
+    padding: 40px 15px;
+  }
+
+  .vibe-heading h2 {
+    font-size: 26px;
+  }
+
+  .vibe-heading p {
+    font-size: 13px;
+  }
+
+  .vibe-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    margin-top: 25px;
+  }
+
+  .vibe-card {
+    height: 220px;
+
+    padding: 20px;
+  }
+
+  .vibe-content h3 {
+    font-size: 23px;
+  }
+
+}

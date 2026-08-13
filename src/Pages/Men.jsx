@@ -58,7 +58,7 @@ const Men = () => {
         <div className="hero-content">
 
           <span className="offer-tag">
-            🔥 NEW ARRIVALS
+            NEW ARRIVALS
           </span>
 
           <h1>Men's Fashion</h1>

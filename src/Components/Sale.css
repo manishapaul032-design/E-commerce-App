@@ -1,0 +1,367 @@
+/* =================================
+   FLASH SALE
+================================= */
+
+.flash-sale {
+  width: 100%;
+
+  padding: 45px 40px 55px;
+
+  background: #111827;
+
+  box-sizing: border-box;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.flash-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+
+.flash-small-title {
+  display: block;
+
+  color: #3b82f6;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 4px;
+}
+
+
+.flash-header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 800;
+}
+
+
+/* =================================
+   COUNTDOWN
+================================= */
+
+.countdown {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.countdown b {
+  color: #ffffff;
+
+  font-size: 20px;
+}
+
+
+.time-box {
+  width: 66px;
+
+  height: 68px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 9px;
+}
+
+
+.time-box strong {
+  color: #111827;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+.time-box span {
+  margin-top: 2px;
+
+  color: #374151;
+
+  font-size: 9px;
+}
+
+
+/* =================================
+   PRODUCT GRID
+================================= */
+
+.flash-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =================================
+   CARD
+================================= */
+
+.flash-card {
+  min-width: 0;
+
+  background: #ffffff;
+
+  padding: 14px;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.flash-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =================================
+   IMAGE
+================================= */
+
+.flash-image {
+  width: 100%;
+
+  height: 210px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 11px;
+
+  background: #f1f5f9;
+}
+
+
+.flash-image img {
+  width: 100%;
+
+  height: 100%;
+
+  max-width: 100%;
+
+  max-height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: 0.4s ease;
+}
+
+
+.flash-card:hover .flash-image img {
+  transform: scale(1.07);
+}
+
+
+/* =================================
+   DISCOUNT BADGE
+================================= */
+
+.discount-badge {
+  position: absolute;
+
+  top: 10px;
+
+  left: 10px;
+
+  z-index: 5;
+
+  padding: 8px 10px;
+
+  border-radius: 5px;
+
+  background: #ff3b45;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =================================
+   PRODUCT INFO
+================================= */
+
+.flash-info {
+  padding: 13px 2px 2px;
+}
+
+
+.flash-info h3 {
+  margin: 0 0 8px;
+
+  color: #111827;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+/* =================================
+   PRICE
+================================= */
+
+.price-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 15px;
+}
+
+
+.sale-price {
+  color: #2563eb;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+
+.old-price {
+  color: #9ca3af;
+
+  font-size: 12px;
+
+  text-decoration: line-through;
+}
+
+
+/* =================================
+   CART BUTTON
+================================= */
+
+.flash-cart {
+  width: 100%;
+
+  height: 42px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.flash-cart:hover {
+  background: #2563eb;
+
+  transform: translateY(-2px);
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 992px) {
+
+  .flash-sale {
+    padding: 40px 25px;
+  }
+
+  .flash-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 576px) {
+
+  .flash-sale {
+    padding: 30px 15px;
+  }
+
+  .flash-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .flash-header h2 {
+    font-size: 24px;
+  }
+
+  .countdown {
+    align-self: flex-end;
+  }
+
+  .flash-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

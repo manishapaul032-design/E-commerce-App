@@ -1,0 +1,247 @@
+.trending-section {
+  width: 100%;
+  padding: 45px 40px 60px;
+  background: #f5f7fb;
+}
+
+
+/* HEADING */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+}
+
+.small-title {
+  display: block;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #111827;
+}
+
+
+/* VIEW ALL */
+
+.view-all-btn {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* GRID */
+
+.trending-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+/* CARD */
+
+.trending-section .trend-card {
+  width: 100%;
+  min-width: 0;
+
+  padding: 14px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+
+  transition: 0.3s ease;
+}
+
+
+.trending-section .trend-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* IMAGE */
+
+.trending-section .trend-image {
+  width: 100%;
+  height: 230px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #f1f5f9;
+}
+
+
+.trending-section .trend-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* NEW */
+
+.trending-section .new-badge {
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+
+  z-index: 10;
+
+  padding: 6px 9px;
+
+  border-radius: 6px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   PRODUCT NAME
+========================= */
+
+.trending-section .product-name {
+  width: 100%;
+
+  margin-top: 14px;
+
+  color: #111827;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 22px;
+
+  min-height: 22px;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.trending-section .product-price {
+  width: 100%;
+
+  margin-top: 8px;
+
+  margin-bottom: 15px;
+
+  color: #2563eb;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  line-height: 22px;
+}
+
+
+/* =========================
+   ADD CART
+========================= */
+
+.trending-section .add-cart {
+  width: 100%;
+
+  height: 44px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.trending-section .add-cart:hover {
+  background: #2563eb;
+}
+
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+  .trending-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+
+  .trending-section {
+    padding: 30px 15px;
+  }
+
+  .trending-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 23px;
+  }
+
+}

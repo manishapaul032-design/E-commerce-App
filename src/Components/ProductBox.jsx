@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProductBox.css";
+
 import Fashion from "./Fashion";
 import Electronics from "./Electronics";
 

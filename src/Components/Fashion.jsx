@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./ProductBox.css";
 import woman from "../assets/images/woman.jpg";
 import man from "../assets/images/man.jpg";
 import Moisturizer from "../assets/images/moisturizer.jpg";
 import Shoes from "../assets/images/shoes.jpg";
 
 const Fashion = () => {
-
   const fashion = [
-
     {
       id: 1,
       category: "women",
@@ -18,7 +16,6 @@ const Fashion = () => {
       price: "₹599",
       discount: "Min. 30% off",
     },
-
     {
       id: 2,
       category: "men",
@@ -27,16 +24,14 @@ const Fashion = () => {
       price: "₹599",
       discount: "Min. 30% off",
     },
-
     {
       id: 3,
       category: "beauty",
       image: Moisturizer,
-      title: "Cosmetics & Jwellery",
+      title: "Cosmetics & Jewellery",
       price: "₹699",
       discount: "Min. 20% off",
     },
-
     {
       id: 4,
       category: "shoes",
@@ -45,46 +40,43 @@ const Fashion = () => {
       price: "₹999",
       discount: "Min. 40% off",
     },
-
   ];
 
   return (
     <div className="product-box">
-
       <div className="product-box-header">
+        <div className="section-title">
+    <span className="title-line"></span>
 
-        <h2>Fashion Top Deals</h2>
+    <h2> Fashion Top Deals</h2>
 
-        <Link to="/products">
-          <button className="view-btn">View All</button>
-        </Link>
-
+    <span className="title-line"></span>
+  </div>
       </div>
 
       <div className="product-box-items">
-
         {fashion.map((item) => (
+          <div className="product-card" key={item.id}>
 
-          <Link
-            to={`/${item.category}`}
-            className="product-card"
-            key={item.id}
-          >
+            <Link to={`/${item.category}`} className="product-link">
+              <img src={item.image} alt={item.title} />
 
-            <img src={item.image} alt={item.title} />
+              <h3>{item.title}</h3>
 
-            <h3>{item.title}</h3>
+              <p className="price">{item.price}</p>
 
-            <p className="price">{item.price}</p>
+              <p className="discount">{item.discount}</p>
+            </Link>
 
-            <p className="discount">{item.discount}</p>
+            <Link to={`/${item.category}`}>
+              <button className="viewall-btn">
+                View All
+              </button>
+            </Link>
 
-          </Link>
-
+          </div>
         ))}
-
       </div>
-
     </div>
   );
 };

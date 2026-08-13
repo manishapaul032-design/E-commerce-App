@@ -1,96 +1,258 @@
-import React,{useState} from "react";
-import { useNavigate } from "react-router-dom";
-import "./Register.css"
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import {
+  FaUser,
+  FaEnvelope,
+  FaLock,
+  FaArrowRight,
+  FaStar,
+} from "react-icons/fa";
+import { MdOutlineStarOutline } from "react-icons/md";
+
+import "./Register.css";
 import Navbar from "../Components/Navbar";
 
-const Register=()=>{
+const Register = () => {
+  const navigate = useNavigate();
 
-const navigate=useNavigate();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
 
-const [form,setForm]=useState({
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-name:"",
-email:"",
-password:"",
-confirmPassword:""
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-})
+    if (form.password !== form.confirmPassword) {
+      alert("Password doesn't match");
+      return;
+    }
 
-const handleChange=(e)=>{
+    alert("Registration Successful");
+    navigate("/login");
+  };
 
-setForm({...form,[e.target.name]:e.target.value})
+  return (
+    <>
+      <Navbar />
 
-}
+      <div className="register-page">
 
-const handleSubmit=(e)=>{
+        {/* Background Decorations */}
+        <div className="register-circle register-circle-one"></div>
+        <div className="register-circle register-circle-two"></div>
+        <div className="register-circle register-circle-three"></div>
 
-e.preventDefault();
+        <div className="register-container">
 
-if(form.password!==form.confirmPassword){
+          {/* LEFT SIDE */}
+          <div className="register-showcase">
 
-alert("Password doesn't match");
+            <div className="register-content">
 
-return;
+              <div className="register-brand">
+                <span>Trend</span>Sphere
+              </div>
 
-}
+              <div className="register-tag">
+                JOIN TRENDSPHERE
+              </div>
 
-// Laravel Register API
+              <h1>
+                Create Your
+                <br />
+                <span>Style Journey.</span>
+              </h1>
 
-alert("Registration Successful");
+              <p>
+                Create an account and discover fashion,
+                beauty, electronics and accessories
+                made for your lifestyle.
+              </p>
 
-navigate("/login");
+              <div className="register-features">
 
-}
+                <div className="feature-item">
+                  <div className="feature-icon">
+                    <FaStar />
+                  </div>
 
-return(
-<>
-<Navbar/>
-<div className="register">
+                  <div>
+                    <strong>Exclusive Deals</strong>
+                    <small>Special offers for members</small>
+                  </div>
+                </div>
 
-<h2>Create Account</h2>
+                <div className="feature-item">
+                  <div className="feature-icon">
+                    <MdOutlineStarOutline />
+                  </div>
 
-<form onSubmit={handleSubmit}>
+                  <div>
+                    <strong>Personalized Shopping</strong>
+                    <small>Find products made for you</small>
+                  </div>
+                </div>
 
-<input
-type="text"
-name="name"
-placeholder="Name"
-onChange={handleChange}
-/>
+              </div>
 
-<input
-type="email"
-name="email"
-placeholder="Email"
-onChange={handleChange}
-/>
+            </div>
 
-<input
-type="password"
-name="password"
-placeholder="Password"
-onChange={handleChange}
-/>
+          </div>
 
-<input
-type="password"
-name="confirmPassword"
-placeholder="Confirm Password"
-onChange={handleChange}
-/>
 
-<button>
+          {/* RIGHT SIDE */}
+          <div className="register-form-area">
 
-Register
+            <div className="register-form">
 
-</button>
+              <div className="register-heading">
 
-</form>
+                
 
-</div>
-</>
-)
+                <h2>Create Account</h2>
 
-}
+                <p>
+                  Start your shopping journey with us
+                </p>
+
+              </div>
+
+
+              <form onSubmit={handleSubmit}>
+
+                {/* NAME */}
+                <div className="register-input-group">
+
+                  <label>Full Name</label>
+
+                  <div className="register-input-box">
+
+                    <FaUser />
+
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter your name"
+                      value={form.name}
+                      onChange={handleChange}
+                      required
+                    />
+
+                  </div>
+
+                </div>
+
+
+                {/* EMAIL */}
+                <div className="register-input-group">
+
+                  <label>Email Address</label>
+
+                  <div className="register-input-box">
+
+                    <FaEnvelope />
+
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      value={form.email}
+                      onChange={handleChange}
+                      required
+                    />
+
+                  </div>
+
+                </div>
+
+
+                {/* PASSWORD */}
+                <div className="register-input-group">
+
+                  <label>Password</label>
+
+                  <div className="register-input-box">
+
+                    <FaLock />
+
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Create a password"
+                      value={form.password}
+                      onChange={handleChange}
+                      required
+                    />
+
+                  </div>
+
+                </div>
+
+
+                {/* CONFIRM PASSWORD */}
+                <div className="register-input-group">
+
+                  <label>Confirm Password</label>
+
+                  <div className="register-input-box">
+
+                    <FaLock />
+
+                    <input
+                      type="password"
+                      name="confirmPassword"
+                      placeholder="Confirm your password"
+                      value={form.confirmPassword}
+                      onChange={handleChange}
+                      required
+                    />
+
+                  </div>
+
+                </div>
+
+
+                {/* REGISTER BUTTON */}
+                <button
+                  type="submit"
+                  className="register-submit"
+                >
+                  Create Account
+                  <FaArrowRight />
+                </button>
+
+              </form>
+
+
+              <div className="login-link-text">
+
+                Already have an account?
+
+                <Link to="/login">
+                  Login
+                </Link>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </>
+  );
+};
 
 export default Register;

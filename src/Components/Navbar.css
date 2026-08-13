@@ -1,303 +1,414 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
 
-body{
-    background:#f5f5f5;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:999;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 45px;
-    background:rgba(255,255,255,.92);
-    backdrop-filter:blur(14px);
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
+body {
+  background: #f5f5f5;
 }
 
-.logo{
-    font-family: "Poppins", sans-serif;
-    font-size: 36px;
-    font-weight: 800;
-    letter-spacing: -1px;
-    margin: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-    user-select: none;
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 14px 45px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.trend{
-    color: #1b3879;     
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  font-size: 36px;
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+
+  white-space: nowrap;
+
+  transition: 0.3s ease;
 }
 
-.sphere{
-    color: #2563EB;    
+
+.trend {
+  color: #1b3879;
 }
 
-.logo:hover{
-    transform: scale(1.03);
+
+.sphere {
+  color: #2563eb;
 }
 
-.logo:hover .trend{
-    color: #000;
+
+.logo:hover {
+  transform: scale(1.03);
 }
 
-.logo:hover .sphere{
-    color: #1d4ed8;
+
+.logo:hover .trend {
+  color: #111827;
 }
 
-.search-box{
 
-    width:48%;
-
-    display:flex;
-
-    align-items:center;
-
-    background:#fff;
-
-    border-radius:50px;
-
-    overflow:hidden;
-
-    border:1px solid #ececec;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-
+.logo:hover .sphere {
+  color: #1d4ed8;
 }
 
-.search-box input{
 
-    flex:1;
+/* =========================
+   SEARCH BOX
+========================= */
 
-    border:none;
+.search-box {
+  width: 48%;
+  max-width: 650px;
 
-    outline:none;
+  height: 52px;
 
-    padding:15px 22px;
+  display: flex;
+  align-items: center;
 
-    font-size:15px;
+  background: #ffffff;
 
-    background:transparent;
+  border: 1px solid #e5e7eb;
 
+  border-radius: 50px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.07);
+
+  transition: 0.3s ease;
 }
 
-.search-box button{
 
-    width:60px;
+.search-box:focus-within {
+  border-color: #2563eb;
 
-    height:52px;
-
-    border:none;
-
-    cursor:pointer;
-
-    color:#fff;
-
-    background:linear-gradient(135deg,#2b7fff,#0047ff);
-
-    transition:.3s;
-
+  box-shadow:
+    0 5px 25px rgba(37, 99, 235, 0.15);
 }
 
-.search-box button:hover{
 
-    background:linear-gradient(135deg,#0047ff,#0036c7);
+.search-box input {
+  flex: 1;
 
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  padding: 0 22px;
+
+  font-size: 14px;
+
+  color: #111827;
+
+  background: transparent;
 }
 
-/* ========================= */
-/* BUTTONS */
-/* ========================= */
 
-.nav-buttons{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
+.search-box input::placeholder {
+  color: #8a8a8a;
 }
+
+
+.search-box button {
+  width: 60px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2b7fff,
+      #0047ff
+    );
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  transition: 0.3s ease;
+}
+
+
+.search-box button:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #0047ff,
+      #0036c7
+    );
+}
+
+
+/* =========================
+   NAV BUTTONS
+========================= */
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  white-space: nowrap;
+}
+
 
 .btn,
 .btn1,
-.btn2{
+.btn2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display:flex;
+  gap: 8px;
 
-    align-items:center;
+  padding: 11px 20px;
 
-    justify-content:center;
+  border-radius: 50px;
 
-    gap:8px;
+  text-decoration: none;
 
-    padding:12px 22px;
+  font-size: 14px;
+  font-weight: 600;
 
-    text-decoration:none;
+  transition: 0.35s ease;
 
-    border-radius:50px;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    transition:.35s;
-
+  cursor: pointer;
 }
 
-/* Wishlist */
 
-.btn2{
+/* =========================
+   WISHLIST
+========================= */
 
-    color:#222;
+.btn2 {
+  color: #111827;
 
-    background:#fff;
+  background: #ffffff;
 
-    border:1px solid #ddd;
-
+  border: 1px solid #dddddd;
 }
 
-.btn2:hover{
 
-    background:#111;
+.btn2:hover {
+  background: #111827;
 
-    color:#fff;
+  color: #ffffff;
 
+  border-color: #111827;
+
+  transform: translateY(-2px);
 }
 
-/* Cart */
 
-.btn{
+/* =========================
+   CART
+========================= */
 
-    background:linear-gradient(135deg,#ff9800,#ff6d00);
+.btn {
+  color: #ffffff;
 
-    color:white;
+  background:
+    linear-gradient(
+      135deg,
+      #ff9800,
+      #ff6d00
+    );
 
-    box-shadow:0 8px 20px rgba(255,152,0,.35);
-
+  box-shadow:
+    0 8px 20px rgba(255, 152, 0, 0.3);
 }
 
-.btn:hover{
 
-    transform:translateY(-3px);
+.btn:hover {
+  transform: translateY(-3px);
 
-    box-shadow:0 12px 25px rgba(255,152,0,.45);
-
+  box-shadow:
+    0 12px 25px rgba(255, 152, 0, 0.45);
 }
 
-/* Login */
 
-.btn1{
+/* =========================
+   LOGIN
+========================= */
 
-    background:#111;
+.btn1 {
+  color: #ffffff;
 
-    color:#fff;
-
+  background: #111827;
 }
 
-.btn1:hover{
 
-    background:#d62828;
+.btn1:hover {
+  background: #2563eb;
 
-    transform:translateY(-3px);
-
+  transform: translateY(-3px);
 }
+
 
 /* Icons */
 
 .btn svg,
-.btn1 svg{
+.btn1 svg {
+  font-size: 17px;
+}
 
-    font-size:18px;
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    padding: 14px 25px;
+
+    gap: 15px;
+  }
+
+
+  .logo {
+    font-size: 30px;
+  }
+
+
+  .search-box {
+    width: 40%;
+  }
+
+
+  .btn,
+  .btn1,
+  .btn2 {
+    padding: 10px 14px;
+
+    font-size: 13px;
+  }
 
 }
 
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
 
-@media(max-width:992px){
+/* =========================
+   MOBILE
+========================= */
 
-.navbar{
+@media (max-width: 768px) {
 
-    flex-wrap:wrap;
+  .navbar {
+    flex-wrap: wrap;
 
-    gap:15px;
+    padding: 15px;
+  }
 
-    padding:20px;
 
-}
+  .logo {
+    width: 100%;
 
-.logo{
+    justify-content: center;
 
-    width:100%;
+    font-size: 30px;
+  }
 
-    text-align:center;
 
-}
+  .search-box {
+    width: 100%;
 
-.search-box{
+    max-width: none;
+  }
 
-    width:100%;
 
-}
+  .nav-buttons {
+    width: 100%;
 
-.nav-buttons{
+    justify-content: center;
 
-    width:100%;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-}
+    flex-wrap: wrap;
+  }
 
 }
 
-@media(max-width:576px){
 
-.logo{
+/* Small Mobile */
 
-    font-size:28px;
+@media (max-width: 480px) {
 
-}
+  .logo {
+    font-size: 27px;
+  }
 
-.search-box input{
 
-    font-size:14px;
+  .search-box {
+    height: 46px;
+  }
 
-    padding:12px 16px;
 
-}
+  .search-box button {
+    width: 50px;
 
-.search-box button{
+    height: 46px;
+  }
 
-    height:46px;
 
-}
+  .search-box input {
+    font-size: 12px;
 
-.btn,
-.btn1,
-.btn2{
+    padding: 0 15px;
+  }
 
-    padding:10px 16px;
 
-    font-size:13px;
+  .btn,
+  .btn1,
+  .btn2 {
+    padding: 9px 13px;
 
-}
+    font-size: 12px;
+  }
 
 }

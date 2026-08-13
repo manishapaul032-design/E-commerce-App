@@ -1,32 +1,75 @@
 import React from "react";
+import "./CartPage.css";
+import {FaShoppingBag,FaArrowRight} from "react-icons/fa";
+import Navbar from "../Components/Navbar";
+import { Link } from "react-router-dom";
 
-export default function Cart({ cart }) {
+const CartPage = () => {
 
   return (
-    <div>
+    <>
+      <Navbar />
 
-      <h1>Cart Page</h1>
+      <div className="cart-page">
 
-      {
-        cart.length === 0 ? (
-          <h3>No Product Added</h3>
-        ) : (
-          cart.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                border: "1px solid gray",
-                margin: "10px",
-                padding: "10px"
-              }}
-            >
-              <h3>{item.name}</h3>
-              <p>₹{item.price}</p>
+       
+        <div className="cart-header">
+
+          <div>
+            <span className="cart-small-title">
+              YOUR SHOPPING BAG
+            </span>
+
+            <h1>
+              My <span>Cart</span>
+            </h1>
+
+            <p>
+              Review your selected products before checkout.
+            </p>
+          </div>
+
+          <div className="cart-bag-icon">
+            <FaShoppingBag />
+          </div>
+
+        </div>
+
+
+        <div className="cart-layout">
+
+          
+          <div className="cart-products">
+
+           
+
+
+            <div className="empty-cart">
+
+              <div className="empty-cart-icon">
+                <FaShoppingBag />
+              </div>
+
+              <h2>Your Cart is Empty</h2>
+
+              <p>
+                Looks like you haven't added anything to your cart yet.
+              </p>
+
+              <Link to="/Productlist" className="continue-btn">
+                <FaArrowRight />
+                Continue Shopping
+              </Link>
+
             </div>
-          ))
-        )
-      }
 
-    </div>
+          </div>
+
+        </div>
+
+      </div>
+    </>
   );
-}
+};
+
+export default CartPage;
