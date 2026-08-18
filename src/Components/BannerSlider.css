@@ -1,0 +1,679 @@
+/* =========================================
+   BANNER SLIDER
+========================================= */
+
+.banner-slider {
+  width: calc(100% - 70px);
+  height: 390px;
+
+  margin: 25px auto;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #eef4ff;
+
+  box-shadow:
+    0 15px 45px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================
+   SLIDER TRACK
+========================================= */
+
+.banner-track {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  will-change: transform;
+
+  /* React inline style controls transition */
+}
+
+
+/* =========================================
+   EACH SLIDE
+========================================= */
+
+.banner-slide {
+  position: relative;
+
+  flex: 0 0 100%;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.banner-slide img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+
+
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 65px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.82) 0%,
+      rgba(255, 255, 255, 0.58) 25%,
+      rgba(255, 255, 255, 0.20) 48%,
+      rgba(255, 255, 255, 0) 68%
+    );
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   BANNER CONTENT
+========================================= */
+
+.banner-content {
+  width: 100%;
+  max-width: 520px;
+
+  animation: bannerContent 0.7s ease;
+}
+
+
+/* =========================================
+   TEXT ANIMATION
+========================================= */
+
+@keyframes bannerContent {
+
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
+/* =========================================
+   SMALL TITLE
+========================================= */
+
+.banner-small-title {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.banner-content h1 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 48px;
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* BLUE HIGHLIGHT */
+
+.banner-content h1 span {
+  color: #2563eb;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.banner-content p {
+  max-width: 440px;
+
+  margin: 15px 0 25px;
+
+  color: #4b5563;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   SHOP BUTTON
+========================================= */
+
+.banner-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  height: 48px;
+
+  padding: 0 24px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.28);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.banner-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px rgba(37, 99, 235, 0.35);
+}
+
+
+/* BUTTON ARROW */
+
+.banner-btn span {
+  font-size: 20px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.banner-btn:hover span {
+  transform: translateX(5px);
+}
+
+
+
+
+  
+
+
+/* =========================================
+   OUTER RING
+========================================= */
+
+.offer-badge::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -7px;
+
+  border-radius: 50%;
+
+  border: 1.5px solid rgba(37, 99, 235, 0.25);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   OFFER TOP TEXT
+========================================= */
+
+.offer-small {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #64748b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   LEFT / RIGHT ARROWS
+========================================= */
+
+.banner-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(10px);
+
+  color: #111827;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.12);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* ARROW HOVER */
+
+.banner-arrow:hover {
+  background: #2563eb;
+
+  color: #ffffff;
+
+  transform:
+    translateY(-50%)
+    scale(1.08);
+}
+
+
+/* PREVIOUS */
+
+.banner-prev {
+  left: 18px;
+}
+
+
+/* NEXT */
+
+.banner-next {
+  right: 18px;
+}
+
+
+/* =========================================
+   DOTS
+========================================= */
+
+.banner-dots {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 18px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  z-index: 20;
+}
+
+
+.banner-dots button {
+  width: 8px;
+  height: 8px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* ACTIVE DOT */
+
+.banner-dots button.active {
+  width: 28px;
+
+  background: #2563eb;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .banner-slider {
+    width: calc(100% - 40px);
+
+    height: 340px;
+  }
+
+
+  .banner-overlay {
+    padding-left: 45px;
+  }
+
+
+  .banner-content {
+    max-width: 450px;
+  }
+
+
+  .banner-content h1 {
+    font-size: 40px;
+  }
+
+
+  .banner-content p {
+    max-width: 380px;
+
+    font-size: 15px;
+  }
+
+
+  @media (max-width: 1000px) {
+
+  .offer-badge {
+    top: 38px;
+    right: 24%;
+
+    width: 90px;
+    height: 90px;
+  }
+
+  .offer-badge strong {
+    font-size: 26px;
+  }
+
+  .offer-small {
+    font-size: 8px;
+  }
+
+  .offer-off {
+    font-size: 9px;
+  }
+
+}
+}
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .banner-slider {
+    width: calc(100% - 25px);
+
+    height: 300px;
+
+    margin: 15px auto;
+
+    border-radius: 18px;
+  }
+
+
+  .banner-overlay {
+    padding: 25px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.94),
+        rgba(255, 255, 255, 0.45),
+        rgba(255, 255, 255, 0)
+      );
+  }
+
+
+  .banner-content {
+    max-width: 300px;
+  }
+
+
+  .banner-small-title {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+  }
+
+
+  .banner-content h1 {
+    font-size: 30px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .banner-content p {
+    max-width: 270px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin: 10px 0 17px;
+  }
+
+
+  .banner-btn {
+    height: 42px;
+
+    padding: 0 18px;
+
+    font-size: 12px;
+  }
+
+
+  /* =====================================
+     MOBILE OFFER
+  ===================================== */
+
+  .offer-badge {
+    top: 20px;
+
+    right: 18%;
+
+    width: 78px;
+    height: 78px;
+  }
+
+
+  .offer-badge::before {
+    inset: -5px;
+  }
+
+
+  .offer-small {
+    font-size: 7px;
+
+    letter-spacing: 1px;
+  }
+
+
+  .offer-badge strong {
+    font-size: 22px;
+
+    letter-spacing: -0.5px;
+  }
+
+
+  .offer-off {
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* ARROWS */
+
+  .banner-arrow {
+    width: 34px;
+    height: 34px;
+
+    font-size: 20px;
+  }
+
+
+  .banner-prev {
+    left: 10px;
+  }
+
+
+  .banner-next {
+    right: 10px;
+  }
+
+
+  /* DOTS */
+
+  .banner-dots {
+    bottom: 12px;
+  }
+
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .banner-slider {
+    height: 270px;
+  }
+
+
+  .banner-content h1 {
+    font-size: 26px;
+  }
+
+
+  .banner-content p {
+    display: none;
+  }
+
+
+  .banner-btn {
+    height: 40px;
+
+    padding: 0 16px;
+  }
+
+
+  .offer-badge {
+    top: 15px;
+
+    right: 14%;
+
+    width: 68px;
+    height: 68px;
+  }
+
+
+  .offer-badge strong {
+    font-size: 19px;
+  }
+
+}

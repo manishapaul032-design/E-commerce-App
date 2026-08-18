@@ -2,28 +2,25 @@ import React from "react";
 import "./Category.css";
 import { Link } from "react-router-dom";
 
-
 import {
   FaTshirt,
   FaMobileAlt,
   FaHeart,
   FaShoePrints,
   FaClock,
-  FaLongArrowAltRight,
 } from "react-icons/fa";
 
 const Category = () => {
-
   const categories = [
     {
       name: "Fashion",
       icon: <FaTshirt />,
-      path: "/men",
+      path: "/fashion",
     },
     {
       name: "Electronics",
       icon: <FaMobileAlt />,
-      path: "/earbuds",
+      path: "/electronics",
     },
     {
       name: "Beauty",
@@ -38,48 +35,38 @@ const Category = () => {
     {
       name: "Watches",
       icon: <FaClock />,
-      path: "/watch",
+      path: "/smartwatch",
     },
   ];
 
   return (
     <section className="category-section">
 
-      <div className="section-heading">
-
+      <div className="category-heading">
         <div>
-          <span className="small-title">
-            EXPLORE
-          </span>
-
+          <span>EXPLORE</span>
           <h2>Shop by Category</h2>
         </div>
 
-        <Link to="/Productlist" className="view-all-btn">
-          View All <FaLongArrowAltRight /> 
+        <Link to="/productlist" className="category-view-all">
+          View All →
         </Link>
-
       </div>
-
 
       <div className="category-list">
 
         {categories.map((category, index) => (
-
           <Link
             to={category.path}
             className="category-item"
             key={index}
           >
-
-            <div className="category-image">
+            <div className="category-icon">
               {category.icon}
             </div>
 
-            <h3>{category.name}</h3>
-
+            <p>{category.name}</p>
           </Link>
-
         ))}
 
       </div>

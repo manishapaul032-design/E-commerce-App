@@ -7,12 +7,14 @@ import TrendingProducts from '../Components/TrendingProducts'
 import Sale from '../Components/Sale'
 import NewArrivals from '../Components/NewArrivals'
 import Vibe from '../Components/Vibe'
+import BannerSlider from '../Components/BannerSlider'
 
 
 const Home = () => {
   return (
     <div>
       <Navbar/>
+      <BannerSlider/>
       <Category/>
       <TrendingProducts/>
       <Sale/>

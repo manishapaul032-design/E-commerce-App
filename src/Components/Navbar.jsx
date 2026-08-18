@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* Wishlist */}
         <Link
           className="btn2"
-          to="/wishlist"
+          to="/login"
         >
           Wishlist
         </Link>
@@ -49,7 +49,7 @@ const Navbar = () => {
         {/* Cart */}
         <Link
           className="btn"
-          to="/CartPage"
+          to="/login"
         >
           <FaShoppingCart />
           <span>Add to Cart</span>
