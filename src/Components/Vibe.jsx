@@ -6,6 +6,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import beauty1 from "../assets/images/beauty1.png";
 import w1 from "../assets/images/w1.png";
 import c1 from "../assets/images/c1.png";
+import c2 from "../assets/images/c2.jpg"
 
 
 const vibes = [
@@ -13,6 +14,7 @@ const vibes = [
     title: "Minimal",
     text: "Simple & Elegant",
     className: "minimal",
+    image: c2,
   },
   {
     title: "Casual",

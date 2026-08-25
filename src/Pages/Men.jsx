@@ -7,6 +7,11 @@ import shirt from "../assets/images/shirt.jpg";
 import hoodie from "../assets/images/hoodie.jpg";
 import jeans from "../assets/images/jeans.jpg";
 import banner from "../assets/images/b4.png";
+import dress1 from "../assets/images/dress1.jpg";
+import kurti from "../assets/images/kurti.jpg";
+import saree from "../assets/images/saree.jpg";
+import top from "../assets/images/top.jpg";
+
 import Navbar from "../Components/Navbar";
 
 const products = [
@@ -27,7 +32,15 @@ const products = [
     image: shirt,
   },
   {
-    id: 3,
+      id: 3,
+      name: "Floral Summer Dress",
+      price: 999,
+      oldPrice: 1499,
+      rating: 4.5,
+      image: dress1,
+    },
+  {
+    id: 4,
     name: "Winter Hoodie",
     price: 1499,
     oldPrice: 2199,
@@ -35,13 +48,38 @@ const products = [
     image: hoodie,
   },
   {
-    id: 4,
+    id: 5,
     name: "Blue Denim Jeans",
     price: 1199,
     oldPrice: 1699,
     rating: 4.3,
     image: jeans,
   },
+  
+    {
+      id: 6,
+      name: "Printed Kurti",
+      price: 799,
+      oldPrice: 1199,
+      rating: 4.3,
+      image: kurti,
+    },
+    {
+      id: 7,
+      name: "Designer Saree",
+      price: 1499,
+      oldPrice: 2299,
+      rating: 4.7,
+      image: saree,
+    },
+    {
+      id: 8,
+      name: "Casual Cotton Top",
+      price: 599,
+      oldPrice: 899,
+      rating: 4.2,
+      image: top,
+    },
 ];
 
 const Men = () => {

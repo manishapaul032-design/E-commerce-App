@@ -26,7 +26,6 @@ const banners = [
     highlight: "Speaks You",
     text: "Find premium products that match your personality.",
     button: "Shop Now",
-
     offerTop: "FLAT",
     offer: "40%",
     offerBottom: "OFF",

@@ -15,12 +15,12 @@ const Category = () => {
     {
       name: "Fashion",
       icon: <FaTshirt />,
-      path: "/fashion",
+      path: "/men",
     },
     {
       name: "Electronics",
       icon: <FaMobileAlt />,
-      path: "/electronics",
+      path: "/earbuds",
     },
     {
       name: "Beauty",
@@ -35,7 +35,7 @@ const Category = () => {
     {
       name: "Watches",
       icon: <FaClock />,
-      path: "/smartwatch",
+      path: "/watch",
     },
   ];
 
